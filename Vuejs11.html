@@ -1,17 +1,46 @@
 ﻿<!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8" />
-<title>Vue.js</title>
+  <meta charset="UTF-8" />
+  <title>Vue.js</title>
 </head>
+
 <body>
-<div id="app">
-  <p>現在値：{{current}}</p>
-  <my-counter step="1" v-on:plus="onplus"></my-counter>
-  <my-counter step="2" v-on:plus="onplus"></my-counter>
-  <my-counter step="-1" v-on:plus="onplus"></my-counter>
-</div>  
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-<script src="Vuejs11.js"></script>
+  <div id="app">
+    <p>現在値：{{current}}</p>
+    <my-counter step="1" v-on:plus="onplus"></my-counter>
+    <my-counter step="2" v-on:plus="onplus"></my-counter>
+    <my-counter step="-1" v-on:plus="onplus"></my-counter>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <!-- <script src="Vuejs11.js"></script> -->
+  <script>
+    // 読みづらいと思うので、Vuejs4.js を読み込まずこちらに書くことにした
+    Vue.component('my-counter', {
+      props: ['step'],
+      template: `<button type="button" v-on:click="onclick">
+    {{ step }}</button>`,
+      methods: {
+        onclick: function () {
+          this.$emit('plus', Number(this.step));
+        }
+      }
+    });
+
+    new Vue({
+      el: '#app',
+      data: {
+        current: 0
+      },
+      methods: {
+        onplus: function (e) {
+          this.current += e;
+        }
+      }
+    });
+  </script>
+
 </body>
+
 </html>

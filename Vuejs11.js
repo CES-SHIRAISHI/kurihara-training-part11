@@ -1,9 +1,9 @@
 Vue.component('my-counter', {
-  props: [ 'step' ], 
+  props: ['step'],
   template: `<button type="button" v-on:click="onclick">
     {{ step }}</button>`,
   methods: {
-    onclick: function() {
+    onclick: function () {
       this.$emit('plus', Number(this.step));
     }
   }
@@ -15,7 +15,7 @@ new Vue({
     current: 0
   },
   methods: {
-    onplus: function(e) {
+    onplus: function (e) {
       this.current += e;
     }
   }

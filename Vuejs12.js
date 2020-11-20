@@ -1,20 +1,20 @@
-﻿var headerTemplate=`
+﻿var headerTemplate = `
 <div>
  <slot name="header">No Title</slot>
 </div>
 `
-var contentTemplate=`
+var contentTemplate = `
 <div>
  <slot name="content">No contents</slot>
 </div>
 `
 
-Vue.component('page-header',{
-    template:headerTemplate
+Vue.component('page-header', {
+  template: headerTemplate
 
 })
-Vue.component('page-content',{
-   template:contentTemplate
+Vue.component('page-content', {
+  template: contentTemplate
 
 })
 

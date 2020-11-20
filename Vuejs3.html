@@ -1,24 +1,58 @@
 ﻿<!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8" />
-<title>Vue.js</title>
-<link rel="stylesheet"
-  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <meta charset="UTF-8" />
+  <title>Vue.js</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
+
 <body>
-<div id="app">
-  <table class="table">
-    <th>ISBN</th><th>書名</th><th>価格</th>
-    <tr v-for="b in books">
-    <!-- <tr v-for="b of books"> -->
-      <td>{{ b.isbn }}</td>
-      <td>{{ b.title }}</td>
-      <td>{{ b.price }}円</td>
-    </tr>
-  </table>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-<script src="Vuejs3.js"></script>
+  <div id="app">
+    <table class="table">
+      <th>ISBN</th>
+      <th>書名</th>
+      <th>価格</th>
+      <tr v-for="b in books">
+        <!-- <tr v-for="b of books"> -->
+        <td>{{ b.isbn }}</td>
+        <td>{{ b.title }}</td>
+        <td>{{ b.price }}円</td>
+      </tr>
+    </table>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <!-- <script src="Vuejs3.js"></script> -->
+  <script>
+    // 読みづらいと思うので、Vuejs4.js を読み込まずこちらに書くことにした
+    new Vue({
+      el: '#app',
+      data: {
+        books: [
+          {
+            isbn: '978-4-7981-5757-3',
+            title: 'JavaScript逆引きレシピ',
+            price: 2800
+          },
+          {
+            isbn: '978-4-8399-6644-7',
+            title: 'たのしいラズパイ電子工作ブック',
+            price: 1900
+          },
+          {
+            isbn: '978-4-7741-9763-0',
+            title: '3ステップでしっかり学ぶ Python入門',
+            price: 2480
+          },
+          {
+            isbn: '978-4-7981-5382-7',
+            title: '独習C# 新版',
+            price: 3600
+          }
+        ]
+      }
+    });
+  </script>
 </body>
+
 </html>
