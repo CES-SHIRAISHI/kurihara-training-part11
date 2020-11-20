@@ -11,7 +11,7 @@
 - [vue-devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
   - Developer Tools に Vue 専用のタブ が増える
   - [公式](https://github.com/vuejs/vue-devtools)
-- [Vue.js入門 基礎から実践アプリケーション開発まで](https://www.amazon.co.jp/dp/B07J6FP6NQ/)
+- [Vue.js入門 基礎から実践アプリケーション開発まで](https://gihyo.jp/book/2018/978-4-297-10091-9)
 
 
 
@@ -44,9 +44,6 @@
 
 - オンラインデモ
   - [Vuejs4.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs4.html)
-
-
------------------------
 
 
 ### P17 : Vuejs5.html
