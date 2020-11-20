@@ -8,38 +8,6 @@
 
 <body>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-  <!-- <script src="Vuejs12.js"></script> -->
-  <script>
-    // 読みづらいと思うので、Vuejs4.js を読み込まずこちらに書くことにした
-    var headerTemplate = `
-<div>
- <slot name="header">No Title</slot>
-</div>
-`
-    var contentTemplate = `
-<div>
- <slot name="content">No contents</slot>
-</div>
-`
-
-    Vue.component('page-header', {
-      template: headerTemplate
-
-    })
-    Vue.component('page-content', {
-      template: contentTemplate
-
-    })
-
-    new Vue({
-
-      el: "#fruits-list"
-
-    })
-
-
-  </script>
-
   <style>
     .header h1 {
       width: 100%;
@@ -71,3 +39,33 @@
       </ul>
     </page-content>
   </div>
+
+  <!-- <script src="Vuejs12.js"></script> -->
+  <script>
+    // 読みづらいと思うので、Vuejs4.js を読み込まずこちらに書くことにした
+    var headerTemplate = `
+<div>
+ <slot name="header">No Title</slot>
+</div>
+`
+    var contentTemplate = `
+<div>
+ <slot name="content">No contents</slot>
+</div>
+`
+
+    Vue.component('page-header', {
+      template: headerTemplate
+
+    })
+    Vue.component('page-content', {
+      template: contentTemplate
+    })
+
+    new Vue({
+      el: "#fruits-list"
+    })
+  </script>
+</body>
+
+</html>

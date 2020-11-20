@@ -11,6 +11,7 @@
 - [vue-devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
   - Developer Tools に Vue 専用のタブ が増える
   - [公式](https://github.com/vuejs/vue-devtools)
+- [Vue.js入門 基礎から実践アプリケーション開発まで](https://www.amazon.co.jp/dp/B07J6FP6NQ/)
 
 
 
@@ -37,12 +38,6 @@
 - オンラインデモ
   - [Vuejs3.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs3.html)
 
-
-
-### P14 : Vuejs3.html
-
-- オンラインデモ
-  - [Vuejs3.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs3.html)
 
 
 ### P16 : Vuejs4.html
@@ -104,6 +99,8 @@
 
 
 ### P28: Vuejs12.html
+
+サンプルコードに誤りがあり、DOMが読み込まれる前に コンポーネントを定義しているので、エラーとなる。script要素を最後に持っていくのが良い
 
 - オンラインデモ
   - [Vuejs12.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs12.html)
