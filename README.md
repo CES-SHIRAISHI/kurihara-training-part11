@@ -17,13 +17,13 @@
 
 ## ハンズオン資料 + 追加したコメント
 
-| 資料ページ | ファイル名 と デモのリンク | 備考 |
+| ページ | デモ | 備考 |
 | ------------- | ------------- | ------------- |
-| 10 | [Vuejs1.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs1.html)  <br>  [資料にあった jsfiddle の リンク](https://jsfiddle.net/9k1gbyrc) |   |
-| 13 | [Vuejs2.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs2.html) | ディレクティブと言われる `v-model` と `v-if` (`v-else` / `v-show`) がいきなり出てきて迷うかもしれないが、事象をそれぞれ分けて考えると良い。 <br> 分かりづらいと思うので、チェックボックスの id を show → checkbox1 に変更した。 <br> コメントアウトしていた `v-else` と `v-show` も表示させることにした <br> `v-if` と `v-else` はセットで考える `v-if` の直前でないと反応しない |
+| 10 | [Vuejs1.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs1.html)  <br>  [jsfiddle](https://jsfiddle.net/9k1gbyrc) |   |
+| 13 | [Vuejs2.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs2.html) | ・ ディレクティブが色々出てきて迷うかもしれないが、それぞれ分けて考えると良い。<br>・ 分かりづらいと思うので、チェックボックスの id を show → checkbox1 に変更 <br>・ コメントアウトしていた `v-else` と `v-show` も表示させることにした <br>・ `v-if` と `v-else` はセットで考える `v-if` の直前でないと反応しない |
 | 14 | [Vuejs3.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs3.html) | |
 | 16 | [Vuejs4.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs4.html) | |
-| 17 | [Vuejs5.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs5.html) | sample では `class="small"` が設定されておらず、よくわからないので、当方で設定した |
+| 17 | [Vuejs5.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs5.html) | * 元ソースでは `class="small"` が設定されておらず、よくわからないので、当方設定 |
 | 18 | [Vuejs6.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs6.html) | |
 | 21 | [Vuejs7.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs7.html) | |
 | 23 | [Vuejs8.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs8.html) | コンポーネント とは、 `再利用可能な Vue オブジェクト` なので、Vue の インスタンス というのがポイント。資料上分かりづらいと思うが、親コンポーネント(root) は `<div id=“fruits-list”>` で 子コンポーネント は `fruits-list-title` という点を意識する。 <br> [参考…公式ページ](https://jp.vuejs.org/v2/guide/components.html) |
