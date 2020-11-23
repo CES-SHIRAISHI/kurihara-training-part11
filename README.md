@@ -20,16 +20,16 @@
 | ページ | デモ | 備考 |
 | ------------- | ------------- | ------------- |
 | 10 | [Vuejs1.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs1.html)  <br>  [jsfiddle](https://jsfiddle.net/9k1gbyrc) |   |
-| 13 | [Vuejs2.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs2.html) | ・ ディレクティブが色々出てきて迷うかもしれないが、それぞれ分けて考えると良い。<br>・ 分かりづらいと思うので、チェックボックスの id を show → checkbox1 に変更 <br>・ コメントアウトしていた `v-else` と `v-show` も表示させることにした <br>・ `v-if` と `v-else` はセットで考える `v-if` の直前でないと反応しない |
+| 13 | [Vuejs2.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs2.html) | ・ ディレクティブが色々出てきて迷うかもですが、それぞれ分けて考える<br>・ 分かりづらいと思うので、チェックボックスの id を show → checkbox1 に変更 <br>・ コメントアウトしていた `v-else` と `v-show` も表示させることにした <br>・ `v-if` と `v-else` はセットで考える `v-if` の直前でないと反応しない |
 | 14 | [Vuejs3.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs3.html) | |
 | 16 | [Vuejs4.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs4.html) | |
 | 17 | [Vuejs5.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs5.html) | ・ 元ソースでは`class="small"` が設定されていないので設定した |
 | 18 | [Vuejs6.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs6.html) | |
 | 21 | [Vuejs7.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs7.html) | |
-| 23 | [Vuejs8.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs8.html) | ・ コンポーネント とは、 `再利用可能な Vue オブジェクト`  <br> ・ 親コンポーネント(root) は `<div>` で 子コンポーネント は `fruits-list-title` を意識する。 <br> ・ [参考:公式ページ](https://jp.vuejs.org/v2/guide/components.html) |
+| 23 | [Vuejs8.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs8.html) | ・  コンポーネント とは、 `再利用可能な Vue オブジェクト`  <br> ・ 親コンポーネント(root) は `<div>` <br>・子コンポーネント は `fruits-list-title` <br> ・ [参考:公式ページ](https://jp.vuejs.org/v2/guide/components.html) |
 | 24 | [Vuejs9.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs9.html) | |
 | 26 | [Vuejs10.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs10.html) | ・ 親コンポーネントは `<div id=“app”>` である(rootコンポーネント)。 <br> このサンプルは コンポーネントのプロパティを解説したもの。 |
 | 27 | [Vuejs11.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs11.html) | |
-| 28 | [Vuejs12.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs12.html) | ・ サンプルコードに誤りがあり、DOMが読み込まれる前に コンポーネントを定義しているので、エラーとなる。 <br> script要素を最後に持っていくのが良い |
+| 28 | [Vuejs12.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs12.html) | ・ 元コードには DOMが読み込まれる前に コンポーネントを定義しエラーとなる。 <br> ・ script要素を最後に持っていくのが良い |
 | 29 | [Vuejs13.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs13.html) | |
 
