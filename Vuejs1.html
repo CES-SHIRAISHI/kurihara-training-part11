@@ -7,15 +7,20 @@
 </head>
 
 <body>
+      <!-- ④ id="app" が Vue アプリとして認識される -->
       <div id="app">
+            <!-- ⑤ Vue アプリの中では {{***}} と定義されると、データが置換される -->
             <p>{{message}}</p>
       </div>
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
       <script>
-            new Vue({
-                  el: '#app',
+            // ① Vue オブジェクトのインスタンスを生成して、Vue の アプリケーションを起動する
+            // ② 引数が設定オブジェクトとなっている
+            // ③ 適用する範囲 と 利用できるデータ を定義している
+            var vm = new Vue({
+                  el: '#app',	/* Vue を適用する要素を指定する（この要素の内部が認識されるということ） */
                   data: {
-                        message: '皆さん、こんにちは!'
+                        message: '皆さん、こんにちは!'	/* Vueアプリ内部で利用できる、データを定義する */
                   }
             });
       </script>

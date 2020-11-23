@@ -8,17 +8,19 @@
 
 <body>
   <div id="app">
-    <button v-on:click="onclick">クリック</button>
-    <!-- <button v-on:click="message= new Date().toLocaleString()">クリック</button> -->
-    <!-- <button v-on:click="onclick()">クリック</button> -->
-    <!-- <button @click="onclick">クリック</button> -->
+    <!-- いろいろな方法があるよ、ということ -->
+    <button v-on:click="onclick">クリック1</button>
+    <button v-on:click="message= new Date().toLocaleString()">クリック2</button>
+    <button v-on:click="onclick()">クリック3</button>
+    <button @click="onclick">クリック4</button>
+    <button v-on:click="message=''">値をクリアする</button>
     <p>{{ message }}</p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <!-- <script src="Vuejs4.js"></script> -->
   <script>
     // 読みづらいと思うので、Vuejs4.js を読み込まずこちらに書くことにした
-    new Vue({
+    var vm = new Vue({
       el: '#app',
       data: {
         message: ''

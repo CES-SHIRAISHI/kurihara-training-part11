@@ -4,19 +4,36 @@
 <head>
   <meta charset="UTF-8" />
   <title>Vue.js</title>
+  <style>
+    .small {
+      color : blue;
+      text-decoration: underline;
+    }
+    .color {
+      color : red !important;
+    }
+    .frame {
+      text-decoration: none !important;
+    }
+  </style>
 </head>
 
 <body>
   <div id="app">
+    <div class="small">
+      皆さん、こんにちは！(vind していない版)
+    </div>
+    <!-- v-bind:clsss を使うと、クラスのスイッチをすることができる、 isChange -->
+    <!-- ※ color は color : color を省略している -->
     <div class="small" v-bind:class="{ color, frame: isChange }">
-      皆さん、こんにちは！
+      皆さん、こんにちは！(vind している版)
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <!-- <script src="Vuejs5.js"></script> -->
   <script>
     // 読みづらいと思うので、Vuejs5.js を読み込まずこちらに書くことにした
-    new Vue({
+    var vm =  new Vue({
       el: '#app',
       data: {
         color: true,

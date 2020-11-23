@@ -8,8 +8,8 @@
 
 <body>
   <div id="app">
+    <!-- data の 値を指定することもできるので、 data.fs = 1.5 と 設定し、 以下の fontSize : fs + 'em' と することもできる ← これがメリット -->
     <div v-bind:style="{ backgroundColor: 'Aqua', fontSize: '1.5em' }">
-      <!-- <div v-bind:style="{ 'background-color': 'Aqua', 'font-size': '1.5em' }"> -->
       皆さん、こんにちは！
     </div>
   </div>
@@ -17,7 +17,7 @@
   <!-- <script src="Vuejs6.js"></script> -->
   <script>
     // 読みづらいと思うので、Vuejs6.js を読み込まずこちらに書くことにした
-    new Vue({
+    var vm = new Vue({
       el: '#app'
     })
   </script>

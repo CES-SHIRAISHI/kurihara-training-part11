@@ -8,9 +8,11 @@
 
 <body>
   <div id="app">
+    <!-- input type="radio" である 要素に v-model="pet" として紐付けている -->
     <form>
       <label for="dog">いぬ</label>
-      <input type="radio" id="dog" value="いぬ" v-model="pet" />
+    <!-- デフォルト値は 'いぬ' なので、表示した段階では いぬ がチェックされる（紐付いているから） -->
+    <input type="radio" id="dog" value="いぬ" v-model="pet" />
       <br />
       <label for="cat">ねこ</label>
       <input type="radio" id="cat" value="ねこ" v-model="pet" />
@@ -18,13 +20,15 @@
       <label for="other">その他</label>
       <input type="radio" id="other" value="その他" v-model="pet" />
     </form>
+    <!-- デフォルト値は 'いぬ' なので、表示した段階では いぬ と表示される -->
     <p> ペット：{{ pet }}</p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <!-- <script src="Vuejs7.js"></script> -->
   <script>
     // 読みづらいと思うので、Vuejs7.js を読み込まずこちらに書くことにした
-    new Vue({
+    // ① アプリケーションとして定義させる
+    var vm = new Vue({
       el: '#app',
       data: {
         pet: 'いぬ'

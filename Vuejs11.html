@@ -7,34 +7,52 @@
 </head>
 
 <body>
+  <!-- 親コンポーネント -->
   <div id="app">
     <p>現在値：{{current}}</p>
+
+    <!-- 子コンポーネント（３つ） -->
     <my-counter step="1" v-on:plus="onplus"></my-counter>
     <my-counter step="2" v-on:plus="onplus"></my-counter>
     <my-counter step="-1" v-on:plus="onplus"></my-counter>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <!-- <script src="Vuejs11.js"></script> -->
+  <!-- 読みづらいと思うので、Vuejs11.js を読み込まずこちらに書くことにした -->
   <script>
-    // 読みづらいと思うので、Vuejs4.js を読み込まずこちらに書くことにした
+    // 子のコンポーネント となるもの
     Vue.component('my-counter', {
       props: ['step'],
-      template: `<button type="button" v-on:click="onclick">
-    {{ step }}</button>`,
+      template: `<button type="button" v-on:click="onclick">{{ step }}</button>`,
       methods: {
+        // ① ボタンが押されると、このメソッドが実行される
         onclick: function () {
+          // わかりやすいように追加
+          console.log("child-components : onclock");
+          // ※1
+          console.log(this);
+          // ② current に 値を設定したいが、参照することができない。(上記 console.log の結果 ※1 を 見ればわかる)
+          // ということで、emit で 親コンポーネント の イベント( onplus ) を設定することで 呼び出して、セットする
+          // 引数は プロパティの step を 数値に変換している 
           this.$emit('plus', Number(this.step));
+
+          // ※2 : vm.current += Number(this.step) は、推奨されないというのは考えてみましょう
         }
       }
     });
 
-    new Vue({
+    // 親のコンポーネント となるもの（厳密には少し違うが、分かりやすく解説するため）
+    var vm = new Vue({
       el: '#app',
       data: {
         current: 0
       },
       methods: {
+        // ③ emit で 呼び出される
         onplus: function (e) {
+          // わかりやすいように追加
+          console.log("parent-components : onplus");
+          // ④ 子コンポーネント から 渡された パラメータ を 自分自身の current プロパティ にセット(加算)する
           this.current += e;
         }
       }

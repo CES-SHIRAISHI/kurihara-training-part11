@@ -12,7 +12,8 @@
     <fruits-list-title></fruits-list-title>
   </div>
   <script>
-    new Vue({
+    // ローカルコンポーネント。前回のサンプルが グルーバルコンポーネント
+    var vm = new Vue({
       el: "#fruits-list",
       components: {
         'fruits-list-title': {

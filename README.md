@@ -17,96 +17,19 @@
 
 ## ハンズオン資料 + 追加したコメント
 
-### P10 : Vuejs1.html
-
-- オンラインデモ
-  - [Vuejs1.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs1.html)
-  - [資料にあった jsfiddle の リンク](https://jsfiddle.net/9k1gbyrc)
-
-
-
-
-### P13 : Vuejs2.html
-
-- オンラインデモ
-  - [Vuejs2.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs2.html)
-
-
-
-### P14 : Vuejs3.html
-
-- オンラインデモ
-  - [Vuejs3.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs3.html)
-
-
-
-### P16 : Vuejs4.html
-
-- オンラインデモ
-  - [Vuejs4.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs4.html)
-
-
-### P17 : Vuejs5.html
-
-- オンラインデモ
-  - [Vuejs5.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs5.html)
-
-
-
-### P18 : Vuejs6.html
-
-- オンラインデモ
-  - [Vuejs6.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs6.html)
-
-
-
-### P21 : Vuejs7.html
-
-- オンラインデモ
-  - [Vuejs7.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs7.html)
-
-
-
-### P23 : Vuejs8.html
-
-- オンラインデモ
-  - [Vuejs8.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs8.html)
-
-
-
-### P24 : Vuejs9.html
-
-- オンラインデモ
-  - [Vuejs9.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs9.html)
-
-
-
-### P26 : Vuejs10.html
-
-- オンラインデモ
-  - [Vuejs10.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs10.html)
-
-
-
-### P27: Vuejs11.html
-
-- オンラインデモ
-  - [Vuejs11.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs11.html)
-
-
-
-### P28: Vuejs12.html
-
-サンプルコードに誤りがあり、DOMが読み込まれる前に コンポーネントを定義しているので、エラーとなる。script要素を最後に持っていくのが良い
-
-- オンラインデモ
-  - [Vuejs12.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs12.html)
-
-
-### P29: Vuejs13.html
-
-- オンラインデモ
-  - [Vuejs13.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs13.html)
-
-
+| 資料ページ | ファイル名 と デモのリンク | 備考 |
+| ------------- | ------------- | ------------- |
+| 10 | [Vuejs1.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs1.html)  <br>  [資料にあった jsfiddle の リンク](https://jsfiddle.net/9k1gbyrc) |   |
+| 13 | [Vuejs2.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs2.html) | ディレクティブと言われる `v-model` と `v-if` (`v-else` / `v-show`) がいきなり出てきて迷うかもしれないが、事象をそれぞれ分けて考えると良い。 <br> 分かりづらいと思うので、チェックボックスの id を show → checkbox1 に変更した。 <br> コメントアウトしていた `v-else` と `v-show` も表示させることにした <br> `v-if` と `v-else` はセットで考える `v-if` の直前でないと反応しない |
+| 14 | [Vuejs3.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs3.html) | |
+| 16 | [Vuejs4.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs4.html) | |
+| 17 | [Vuejs5.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs5.html) | sample では `class="small"` が設定されておらず、よくわからないので、当方で設定した |
+| 18 | [Vuejs6.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs6.html) | |
+| 21 | [Vuejs7.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs7.html) | |
+| 23 | [Vuejs8.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs8.html) | コンポーネント とは、 `再利用可能な Vue オブジェクト` なので、Vue の インスタンス というのがポイント。資料上分かりづらいと思うが、親コンポーネント(root) は `<div id=“fruits-list”>` で 子コンポーネント は `fruits-list-title` という点を意識する。 <br> [参考…公式ページ](https://jp.vuejs.org/v2/guide/components.html) |
+| 24 | [Vuejs9.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs9.html) | |
+| 26 | [Vuejs10.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs10.html) | 親コンポーネントは `<div id=“app”>` である(rootコンポーネント)。このサンプルは コンポーネントのプロパティを解説したもの。 |
+| 27 | [Vuejs11.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs11.html) | |
+| 28 | [Vuejs12.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs12.html) | サンプルコードに誤りがあり、DOMが読み込まれる前に コンポーネントを定義しているので、エラーとなる。script要素を最後に持っていくのが良い |
+| 29 | [Vuejs13.html](https://ces-shiraishi.github.io/kurihara-training-part11/Vuejs13.html) | |
 

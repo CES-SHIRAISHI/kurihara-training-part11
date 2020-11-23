@@ -9,13 +9,16 @@
 <body>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <div id="fruits-list">
+    <!-- fruits-list-title という コンポーネントが定義されているので、置き換えられる -->
     <fruits-list-title></fruits-list-title>
   </div>
   <script>
+    // fruits-list-title というコンポーネント(独自要素) を定義
     Vue.component('fruits-list-title', {
+      /* <h1>フルーツ一覧</h1> という内容を表示する <fruits-list-title> という 要素を定義している */
       template: '<h1>フルーツ一覧</h1>'
     });
-    new Vue({
+    var vm = new Vue({
       el: '#fruits-list'
     })
   </script>

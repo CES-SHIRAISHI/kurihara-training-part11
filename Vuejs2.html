@@ -9,22 +9,28 @@
 <body>
   <div id="app">
     <form>
-      <label for="show">表示／非表示</label>
-      <input type="checkbox" id="show" v-model="show" />
+      <label for="checkbox1">表示／非表示</label>
+      <!-- Vue の data.show と v-model=show の値を関連付ける -->
+      <input type="checkbox" id="checkbox1" v-model="show" />
     </form>
-    <div id="panel" v-if="show">
-      <!-- <div id="panel" v-show="show"> -->
-      <h3>RSSフィードについて</h3>
-      <div>WINGSでは、弊社執筆の書籍／雑誌／Web記事の最新50件をRSS形式で提供しています。<br />
+    <!-- Vue の data.show が true なら 描画、 false なら 非描画される -->
+    <div id="panel1" v-if="show">
+      <h3>RSSフィードについて(v-if)</h3>
+      <div>(v-if)WINGSでは、弊社執筆の書籍／雑誌／Web記事の最新50件をRSS形式で提供しています。<br />
         RSSとはなにか、その使い方を含め、ご案内します。</div>
     </div>
-    <!-- <div v-else>現在、非表示状態です。</div> -->
+    <div v-else>(v-if)現在、非表示状態です。</div>
+    <div id="panel2" v-show="show">
+      <h3>RSSフィードについて(v-show)</h3>
+      <div>(v-show)WINGSでは、弊社執筆の書籍／雑誌／Web記事の最新50件をRSS形式で提供しています。<br />
+        RSSとはなにか、その使い方を含め、ご案内します。</div>
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <!-- <script src="Vuejs2.js"></script> -->
   <script>
     // 読みづらいと思うので、Vuejs4.js を読み込まずこちらに書くことにした
-    new Vue({
+    var vm = new Vue({
       el: '#app',
       data: {
         show: true

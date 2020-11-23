@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue.js</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- カスタム属性として、プロパティを設定できる -->
+    <my-hello your-name="鈴木"></my-hello><!-- 鈴木さん を 設定 -->
+    <my-hello></my-hello><!-- 何も設定していない -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <!-- <script src="Vuejs10.js"></script> -->
+  <script>
+    // 読みづらいと思うので、Vuejs10.js を読み込まずこちらに書くことにした
+
+    // グローバルコンポーネントの定義
+    Vue.component('my-hello', {
+      /* プロパティの定義 … yourName というプロパティを定義（コンポーネントに定義できるカスタム属性） */
+      props: ['yourName'],
+
+      // props: {
+      //   yourName: {
+      //     type: String,
+      //     required: true
+      //   }
+      // },
+
+      /* テンプレートの定義 */
+      template: `<div>こんにちは、{{ yourName }}さん！</div>`,
+    })
+
+    var vm = new Vue({
+      el: '#app',
+    });
+  </script>
+</body>
+
+</html>
